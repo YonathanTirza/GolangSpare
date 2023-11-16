@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Menu Sparepart Mobil</title>
+</head>
+<body>
+    <div class="navbar">
+        <span class="toggle-btn" onclick="toggleSidebar()">☰</span>
+        <div class="header-content">
+            <nav aria-label>
+                <ul>
+                    <li><a href="/">Beranda</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/kategori">Kategori</a></li>
+                    <li><a href="/keranjang">Keranjang</a></li>
+                </ul>
+            </nav>
+            <h1>Sparepart Mobil Store</h1>
+        </div>
+    </div>
+
+    <div class="sidenav" id="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">×</span>
+        <h2>Merk Mobil</h2>
+        <ul>
+            <li><a href="#honda">Honda</a></li>
+            <li><a href="#toyota">Toyota</a></li>
+            <li><a href="#daihatsu">Daihatsu</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <section id="content">
+            <!-- Isi konten HTML lainnya disini -->
+            <h2>Sparepart Mobil</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="static/material/flatfoot-76564_1280.jpg" alt="Ban mobil">
+                    <div class="card-content">
+                        <h3>Ban mobil</h3>
+                        <p>Rp20.000</p>
+                    </div>
+                    <div class="quantity-section">
+                        <button class="quantity-btn" onclick="ubahKuantitas('increment', this)">+</button>
+                        <input type="text" class="quantity-input" id="quantity" name="quantity" value="0" readonly>
+                        <button class="quantity-btn" onclick="ubahKuantitas('decrement', this)">-</button>
+                    </div>
+                    <button onclick="tambahKeKeranjang('Ban', 20000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="card">
+                    <img src="/static/material/battery-2490122_1280.jpg" alt="Aki mobil">
+                    <div class="card-content">
+                        <h3>Aki mobil</h3>
+                        <p>Rp50.000</p>
+                    </div>
+                    <div class="quantity-section">
+                        <button class="quantity-btn" onclick="ubahKuantitas('increment', this)">+</button>
+                        <input type="text" class="quantity-input" id="quantity" name="quantity" value="0" readonly>
+                        <button class="quantity-btn" onclick="ubahKuantitas('decrement', this)">-</button>
+                    </div>
+                    <button onclick="tambahKeKeranjang('Aki', 50000)">Tambah ke Keranjang</button>
+                </div>
+                <!-- Tambahkan card lainnya sesuai kebutuhan -->
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
